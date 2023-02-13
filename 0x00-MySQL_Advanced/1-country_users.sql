@@ -1,8 +1,8 @@
--- script that creates a table users if not exists
--- table should contain id, email, name and country
+-- SQL script that creates a table users
+-- script can be excuted on any databases
 CREATE TABLE if NOT EXISTS `users` (
-    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `email` VARCHAR(255) NOT NULL,
-    `name` VARCHAR(255),
-    `country` ENUM('US', 'CO', 'TN') NOT NULL
+       `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+       `email` VARCHAR(255) NOT NULL UNIQUE,
+       `name`  VARCHAR(255),
+       `country` ENUM('US', 'CO', 'TN') NOT NULL
 );

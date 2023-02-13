@@ -1,7 +1,7 @@
 -- SQL script that creates a table users
--- script can be executed on any database
+-- script can be excuted on any databases
 CREATE TABLE if NOT EXISTS `users` (
-    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `email` VARCHAR(255) NOT NULL UNIQUE,
-    `name` VARCHAR(255)
+       `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+       `email` VARCHAR(255) NOT NULL UNIQUE,
+       `name`  VARCHAR(255)
 );

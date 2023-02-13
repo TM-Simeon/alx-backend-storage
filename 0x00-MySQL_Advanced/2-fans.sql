@@ -1,6 +1,5 @@
--- sql script that ranks country origins of bands
--- this script imports table from the dump: metal_bands.sql (zipped)
-select  origin, sum(fans) as `nb_fans` from `metal_bands`
-group by `origin`
-order by `nb_fans` desc limit 10;
-
+-- SQL script that ranks country origins of bands,
+-- ordered by the number of (non-unique) fans
+SELECT DISTINCT `origin`, SUM(`fans`) as `nb_fans` FROM `metal_bands`
+GROUP BY `origin`
+ORDER BY `nb_fans` DESC;
